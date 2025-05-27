@@ -67,8 +67,6 @@
 
 # search(Headd, 9) # Your choice but in this case is 9, True
 
-######## TO TRY: GET THE NUMBERS ON THE LISTS THAT IS MULTIPLES OF 2 AND MAKE IT INTO LINKED LISTS
-
 # Doubly Linked Lists ===================================================================================
 # class DoublyNode:
 #     def __init__(self, val, next=None, prev=None):
@@ -78,6 +76,47 @@
 
 #     def __str__(self):
 #         return str(self.val)
+
+
+# head = tail = DoublyNode(1)
+# print(tail)
+
+
+# Display Doubly linked lists
+# def show(head):
+#     curr = head
+#     links = []
+#     while curr:
+#         links.append(str(curr.val))
+#         curr = curr.next
+#     print(" <-> ".join(links))
+
+
+# Insert something in the beginning which changes the head // O(1) because its the beginning
+
+
+# def insert_new_headd(head, tail, val):
+#     new_node = DoublyNode(val, next=head)
+#     head.prev = new_node
+#     return new_node, tail
+
+
+# input = input("Enter new head: ") // if want an input from user, change the 3 into input
+# head, tail = insert_new_headd(head, tail, 3)
+# show(head)
+
+# Insert something in the end which changes the head // O(1) because its the end
+
+
+# def insert_new_end(head, tail, val):
+#     new_node = DoublyNode(val, prev=tail)
+#     tail.next = new_node
+#     return head, new_node
+
+
+# input = input("Enter new head: ") // if want an input from user, change the 3 into input
+# head, tail = insert_new_end(head, tail, 3)
+# show(head)
 
 
 # Head = DoublyNode(00)
@@ -94,3 +133,20 @@
 # C.prev = B
 # B.prev = A
 # A.prev = Head
+
+
+# TO TRY: GET THE NUMBERS ON THE LISTS THAT IS MULTIPLES OF 2 AND MAKE IT INTO LINKED LISTS ====================================================
+class SinglyNode:
+    def __init__(self, val, next=None):
+        self.val = val
+        self.next = next
+
+    def __str__(self):
+        return str(self.val)
+
+head = SinglyNode(1)
+print(head)
+
+enterNumbers = input("Enter comma-separated numbers: ").split(",")
+print("Entered numbers: ", enterNumbers)
+def()
