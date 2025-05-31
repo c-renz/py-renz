@@ -136,17 +136,20 @@
 
 
 # TO TRY: GET THE NUMBERS ON THE LISTS THAT IS MULTIPLES OF 2 AND MAKE IT INTO LINKED LISTS ====================================================
-class SinglyNode:
-    def __init__(self, val, next=None):
-        self.val = val
-        self.next = next
+# class SinglyNode:
+#     def __init__(self, val, next=None):
+#         self.val = val
+#         self.next = next
 
-    def __str__(self):
-        return str(self.val)
+#     def __str__(self):
+#         return str(self.val)
 
-head = SinglyNode(1)
-print(head)
+# head = SinglyNode(1)
+# print(head)
 
-enterNumbers = input("Enter comma-separated numbers: ").split(",")
-print("Entered numbers: ", enterNumbers)
-def()
+# enterNumbers = input("Enter comma-separated numbers: ").split(",")
+# print("Entered numbers: ", enterNumbers)
+# def insert_new(head, val):
+#     new_node = SinglyNode(val, next=head)
+#     head.prev = new_node
+#     return new_node
