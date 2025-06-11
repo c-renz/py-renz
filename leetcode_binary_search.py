@@ -26,3 +26,24 @@ class Solution:
 
 sol = Solution()
 print(sol.search([0, 6, 12, 33, 54, 67, 75, 87, 98], 67))
+
+
+# Condition Based
+# [F,F,F,T,T,T]
+
+B = [False, False, True, True]  # NOTE: it should be fffttt no tft ftf
+# B = [True, True, False, False]
+
+
+def binary_condition(arr):
+    L, R = 0, len(arr) - 1
+    while L < R:
+        M = L + (R - L) // 2
+        if B[M]:  # NOTE: use not if searching for first false  like in tttffff
+            R = M
+        else:
+            L = M + 1
+    return L
+
+
+print(binary_condition(B))
