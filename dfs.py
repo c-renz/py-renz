@@ -153,11 +153,13 @@ def preorder_iterative(node):
 preorder_iterative(A)
 
 
+# DFS basic lookup function
 def find_dfs(node, target):
     stk = [node]
     if not node:
         return False
     if node.val == target:
+
         return print("True")
     return find_dfs(node.left, target) or find_dfs(node.right, target)
 
