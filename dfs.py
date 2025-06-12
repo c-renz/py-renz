@@ -133,3 +133,33 @@ def dis_post_order(node):
 
 
 dis_post_order(A)
+
+
+# Iterative way of Pre order Traversal
+
+
+def preorder_iterative(node):
+    stk = [node]
+
+    while stk:
+        node = stk.pop()
+        print(node)
+        if node.right:
+            stk.append(node.right)
+        if node.left:
+            stk.append(node.left)
+
+
+preorder_iterative(A)
+
+
+def find_dfs(node, target):
+    stk = [node]
+    if not node:
+        return False
+    if node.val == target:
+        return print("True")
+    return find_dfs(node.left, target) or find_dfs(node.right, target)
+
+
+find_dfs(A, 10)
