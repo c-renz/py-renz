@@ -74,3 +74,22 @@ heap = []
 for x in D:
     heapq.heappush(heap, x)
     print(heap)
+
+
+# Putting tuples on the heap
+
+E = [2, 3, 4, 5, 5, 3, 22, 2, 5, 4, 5, 4, 34234, 523]
+
+from collections import Counter
+
+count = Counter(E)
+print(count)  # prints the frequency of every values
+
+
+heapp = []
+
+for k, v in count.items():
+    print(k, v)
+    heapq.heappush(heapp, (k, v))
+
+print(heapp)
