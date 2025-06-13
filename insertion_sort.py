@@ -16,3 +16,5 @@ def insertion_sort(arr):
 
 
 print(insertion_sort(B))
+
+# j traverse back to seccure all the previous values are sorted before i move forward in the array
